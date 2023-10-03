@@ -1,0 +1,64 @@
+#range()
+for x in range(5):
+    print(x)
+    
+for x in range(3,10):
+    print(x)
+    
+for x in range(2,8,3):
+    print(x)
+  
+for x in range(10,2,-3):
+    print(x)    
+x=23410023
+n=0
+p=1
+while x>0:
+    ch = x%10
+    if ch%2==0:
+        n+=ch # n=n+x%10
+    else:
+        p*=ch # p=p*ch
+    x//=10  #x=x//10
+print(n,p)
+
+# f(x) = (2x+7)/(x**4-4)
+# a,b,h
+# 2,7,2
+#f(2)+f(4)+f(7)
+a=int(input("Введи а:"))
+b=int(input("Введи b:"))
+h=int(input("Введи h:"))
+sum=0
+flag =0
+for x in range(a,b,h):
+    flag=1
+    y=2*x+7
+    sum+=y
+else:
+    print("ERROR!")
+if flag>0:
+    print(sum)
+    
+# Найти минимальное число, большее 1000
+# сумма двух последних цифр которого = 5
+# а сумма всех цифр больше 10
+min = 10000000
+for x in range(1001,10000000):
+   # ch =x%100
+    #ch1 = ch%10
+    #ch2= ch//10
+    ch1 = x%10
+    ch2 = (x//10)%10
+    if ch1+ch2==5:
+        a = x
+        sum=0
+        while a>0:
+            sum+=a%10
+            a//=10
+        if sum>10:
+            if min>x:
+                min = x
+else:
+    print("ERROR")
+print(min)
